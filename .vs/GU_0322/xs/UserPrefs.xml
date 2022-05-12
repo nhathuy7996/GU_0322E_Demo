@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{B400FBD6-E0D2-BD8A-AD43-2E54461F399B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/playerController.cs">
+    <Files>
+      <File FileName="Assets/playerController.cs" Line="36" Column="85" />
+      <File FileName="Assets/huy.cs" />
+      <File FileName="Assets/cameraCOntroller.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GU_0322" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="playerController.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5f819463-3bad-4087-9445-02faa78ff27f" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
