@@ -39,6 +39,13 @@ public class bulletController : MonoBehaviour
         this.gameObject.SetActive(false);
         Destroy(collision.gameObject);
 
-        GameController.Instant.Score++;
+        //GameObject.Find("GameController").
+        //    GetComponent<GameController>().Score++;
+
+        //GameObject.FindObjectOfType<GameController>().Score++;
+
+
+
+        GameController.Instant.Score += -10;
     }
 }

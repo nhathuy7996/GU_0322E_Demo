@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerController : MonoBehaviour
+public class playerController : ObjectPooling
 {
-    [SerializeField] GameObject bulletPrefab;
-    public GameObject g = null;
+   
+    
     [SerializeField] float atkSpeed;
     float timer = 0;
 
-    List<GameObject> poolBullet = new List<GameObject>();
-
+ 
     [SerializeField]public  float HP = 100;
 
     private void Start()
@@ -46,22 +45,13 @@ public class playerController : MonoBehaviour
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        foreach (GameObject g2 in poolBullet)
-        {
-            if (!g2.activeSelf)
-            {
-                g2.transform.position = this.transform.position;
-                g2.transform.rotation = Quaternion.Euler(0, 0, angle -90);
-
-                g2.SetActive(true);
-                return;
-            }
-        }
 
 
-        g = Instantiate(bulletPrefab, this.transform.position,
-            Quaternion.Euler(0, 0, angle -90));
-        poolBullet.Add(g);
+        GameObject g = this.getObj();
+        g.transform.position = this.transform.position;
+        g.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+
+        g.SetActive(true);
     }
 
     void CountdownTimer()

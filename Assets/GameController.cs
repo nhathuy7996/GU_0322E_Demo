@@ -2,29 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameController : Singleton<GameController>
 {
 
-    private static GameController instant;
+    private int _Score;
 
-    public static GameController Instant => instant;
-
-    [SerializeField]
-    private playerController _player;
-
-    public playerController player
+    public int Score
     {
-        get
-        {
-            if (_player == null)
-                _player = FindObjectOfType<playerController>();
+        get { return _Score; }
 
-            return _player;
+        set {
+            if(value >= 0)
+            _Score = value;
         }
     }
-
-
-    public int Score = 0;
 
     [SerializeField] GameObject enemyPrefab;
 
@@ -36,9 +27,7 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        if (GameController.instant == null)
-            GameController.instant = this;
-
+        base.Awake();
         DontDestroyOnLoad(this.gameObject);
     }
 
