@@ -54,16 +54,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets/02 SCRIPT/MenuController.cs" />
+    <Compile Include="Assets/ObjectPooling.cs" />
     <Compile Include="Assets/GameController.cs" />
     <Compile Include="Assets/cameraCOntroller.cs" />
+    <Compile Include="Assets/TestUniTask.cs" />
+    <Compile Include="Assets/02 SCRIPT/Command Partterm/MoveLeft.cs" />
     <Compile Include="Assets/WkrMain.cs" />
+    <Compile Include="Assets/02 SCRIPT/Command Partterm/MoveRight.cs" />
+    <Compile Include="Assets/02 SCRIPT/Command Partterm/Command.cs" />
     <Compile Include="Assets/huy.cs" />
     <Compile Include="Assets/playerController.cs" />
+    <Compile Include="Assets/02 SCRIPT/Command Partterm/TestCMP.cs" />
+    <Compile Include="Assets/Singleton.cs" />
     <Compile Include="Assets/02 SCRIPT/enemyController.cs" />
     <Compile Include="Assets/bulletController.cs" />
-    <Compile Include="Assets/TestUniTask.cs" />
-    <Compile Include="Assets/Singleton.cs" />
-    <Compile Include="Assets/ObjectPooling.cs" />
+    <Compile Include="Assets/02 SCRIPT/FlyWeight/Enemy.cs" />
+    <Compile Include="Assets/02 SCRIPT/FlyWeight/EnemyController.cs" />
+    <Compile Include="Assets/02 SCRIPT/Factory/Animal.cs" />
+    <Compile Include="Assets/02 SCRIPT/Factory/Dog.cs" />
+    <Compile Include="Assets/02 SCRIPT/Factory/Cat.cs" />
+    <Compile Include="Assets/02 SCRIPT/Factory/Duck.cs" />
+    <Compile Include="Assets/02 SCRIPT/Factory/TestFactory.cs" />
+    <Compile Include="Assets/02 SCRIPT/Factory/AnimaFactory.cs" />
+    <Compile Include="Assets/02 SCRIPT/Observer/ObserverManager.cs" />
+    <Compile Include="Assets/02 SCRIPT/Observer/testObserver.cs" />
+    <Compile Include="Assets/02 SCRIPT/Observer/test1.cs" />
+    <Compile Include="Assets/02 SCRIPT/Observer/test2.cs" />
+    <Compile Include="Assets/02 SCRIPT/Observer/testObserver2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -731,25 +748,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UniTask.Addressables.csproj">
-      <Project>{FA07FCC6-640E-4B08-C32E-76B0D79FDE49}</Project>
-      <Name>UniTask.Addressables</Name>
-    </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.csproj">
       <Project>{71E32437-2320-8AD3-F3F7-289CF8FAAD63}</Project>
       <Name>UniTask.DOTween</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.csproj">
-      <Project>{94E9A65E-6DF6-B2AE-45CE-5D0104433154}</Project>
-      <Name>UniTask</Name>
+    <ProjectReference Include="UniTask.Linq.csproj">
+      <Project>{062117E3-554A-25CC-02BB-856094B296A5}</Project>
+      <Name>UniTask.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.TextMeshPro.csproj">
       <Project>{6CBDC453-DBD4-F358-4DAA-AC8328089BCA}</Project>
       <Name>UniTask.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{062117E3-554A-25CC-02BB-856094B296A5}</Project>
-      <Name>UniTask.Linq</Name>
+    <ProjectReference Include="UniTask.csproj">
+      <Project>{94E9A65E-6DF6-B2AE-45CE-5D0104433154}</Project>
+      <Name>UniTask</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Addressables.csproj">
+      <Project>{FA07FCC6-640E-4B08-C32E-76B0D79FDE49}</Project>
+      <Name>UniTask.Addressables</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
